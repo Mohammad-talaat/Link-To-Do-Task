@@ -24,7 +24,10 @@ export class AppComponent {
 
   addNewToDoItem() {
     console.log(this.todoForm.value?.item);
-    if (this.todoForm.value?.item !== null ) {
+    if (
+      this.todoForm.value?.item !== null &&
+      this.todoForm.value?.item !== ''
+    ) {
       this.items.push({ value: this.todoForm.value?.item, checked: false });
     }
   }
